@@ -1,0 +1,32 @@
+name:                devs-intuit
+version:             0.1.0.0
+synopsis:            QuickCheck property-based testing demo
+description:         Code from John Hughes' talk <https://youtu.be/NcJOiQlzlXQ
+                     "Building on developers' intuitions to create effective property-based
+                     tests">
+license:             BSD3
+license-file:        LICENSE
+author:              Jacob Mitchell
+maintainer:          jmitchell@member.fsf.org
+category:            Testing
+build-type:          Simple
+extra-source-files:  ChangeLog.md
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Demo.Coin
+                     , Demo.BST
+  build-depends:       base >=4.11 && <4.12
+  default-language:    Haskell2010
+
+test-suite tests
+  hs-source-dirs:      tests
+  other-modules:       Coin
+                     , BST
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  type:                exitcode-stdio-1.0
+  build-depends:       base
+                     , devs-intuit
+                     , QuickCheck >=2.12.6.1
