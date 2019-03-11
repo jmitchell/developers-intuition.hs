@@ -5,7 +5,7 @@ John Hughes.
 
 ## Usage
 
-If you're a [Nix](https://nixos.org/nix/) users start by running
+If you're a [Nix](https://nixos.org/nix/) user start by running
 `nix-shell`.
 
 Everyone:
